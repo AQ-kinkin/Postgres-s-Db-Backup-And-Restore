@@ -1,0 +1,19 @@
+C:\Users\hamed\Desktop\Database Backup\Database Backup\bin\Debug\net5.0-windows\Database Backup.exe
+C:\Users\hamed\Desktop\Database Backup\Database Backup\bin\Debug\net5.0-windows\Database Backup.deps.json
+C:\Users\hamed\Desktop\Database Backup\Database Backup\bin\Debug\net5.0-windows\Database Backup.runtimeconfig.json
+C:\Users\hamed\Desktop\Database Backup\Database Backup\bin\Debug\net5.0-windows\Database Backup.runtimeconfig.dev.json
+C:\Users\hamed\Desktop\Database Backup\Database Backup\bin\Debug\net5.0-windows\Database Backup.dll
+C:\Users\hamed\Desktop\Database Backup\Database Backup\bin\Debug\net5.0-windows\Database Backup.pdb
+C:\Users\hamed\Desktop\Database Backup\Database Backup\obj\Debug\net5.0-windows\Database Backup.csproj.AssemblyReference.cache
+C:\Users\hamed\Desktop\Database Backup\Database Backup\obj\Debug\net5.0-windows\Database Backup.csproj.GenerateResource.cache
+C:\Users\hamed\Desktop\Database Backup\Database Backup\obj\Debug\net5.0-windows\Database Backup.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hamed\Desktop\Database Backup\Database Backup\obj\Debug\net5.0-windows\Database Backup.AssemblyInfoInputs.cache
+C:\Users\hamed\Desktop\Database Backup\Database Backup\obj\Debug\net5.0-windows\Database Backup.AssemblyInfo.cs
+C:\Users\hamed\Desktop\Database Backup\Database Backup\obj\Debug\net5.0-windows\Database Backup.csproj.CoreCompileInputs.cache
+C:\Users\hamed\Desktop\Database Backup\Database Backup\obj\Debug\net5.0-windows\Database Backup.dll
+C:\Users\hamed\Desktop\Database Backup\Database Backup\obj\Debug\net5.0-windows\refint\Database Backup.dll
+C:\Users\hamed\Desktop\Database Backup\Database Backup\obj\Debug\net5.0-windows\Database Backup.pdb
+C:\Users\hamed\Desktop\Database Backup\Database Backup\obj\Debug\net5.0-windows\Database Backup.genruntimeconfig.cache
+C:\Users\hamed\Desktop\Database Backup\Database Backup\obj\Debug\net5.0-windows\ref\Database Backup.dll
+C:\Users\hamed\Desktop\Database Backup\Database Backup\obj\Debug\net5.0-windows\Database_Backup.Backup.resources
+C:\Users\hamed\Desktop\DataBase Backup\Database Backup\obj\Debug\net5.0-windows\Database_Backup.Properties.Resources.resources
