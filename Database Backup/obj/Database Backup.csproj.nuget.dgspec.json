@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hamed\\Desktop\\Database Backup\\Database Backup\\Database Backup.csproj": {}
+    "J:\\alex\\source\\repos\\Postgres-s-Db-Backup-And-Restore\\Database Backup\\Database Backup.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hamed\\Desktop\\Database Backup\\Database Backup\\Database Backup.csproj": {
+    "J:\\alex\\source\\repos\\Postgres-s-Db-Backup-And-Restore\\Database Backup\\Database Backup.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hamed\\Desktop\\Database Backup\\Database Backup\\Database Backup.csproj",
+        "projectUniqueName": "J:\\alex\\source\\repos\\Postgres-s-Db-Backup-And-Restore\\Database Backup\\Database Backup.csproj",
         "projectName": "Database Backup",
-        "projectPath": "C:\\Users\\hamed\\Desktop\\Database Backup\\Database Backup\\Database Backup.csproj",
-        "packagesPath": "C:\\Users\\hamed\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hamed\\Desktop\\Database Backup\\Database Backup\\obj\\",
+        "projectPath": "J:\\alex\\source\\repos\\Postgres-s-Db-Backup-And-Restore\\Database Backup\\Database Backup.csproj",
+        "packagesPath": "J:\\alex\\.nuget\\packages\\",
+        "outputPath": "J:\\alex\\source\\repos\\Postgres-s-Db-Backup-And-Restore\\Database Backup\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\hamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "J:\\alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -31,7 +32,11 @@
         "frameworks": {
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "J:\\alex\\source\\repos\\Postgres-s-Db-Backup-And-Restore\\postgres_backups_solutions\\postgres_backups_solutions.csproj": {
+                "projectPath": "J:\\alex\\source\\repos\\Postgres-s-Db-Backup-And-Restore\\postgres_backups_solutions\\postgres_backups_solutions.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -53,6 +58,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.16, 5.0.16]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -63,6 +74,21 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "J:\\alex\\source\\repos\\Postgres-s-Db-Backup-And-Restore\\postgres_backups_solutions\\postgres_backups_solutions.csproj": {
+      "restore": {
+        "projectUniqueName": "J:\\alex\\source\\repos\\Postgres-s-Db-Backup-And-Restore\\postgres_backups_solutions\\postgres_backups_solutions.csproj",
+        "projectName": "postgres_backups_solutions",
+        "projectPath": "J:\\alex\\source\\repos\\Postgres-s-Db-Backup-And-Restore\\postgres_backups_solutions\\postgres_backups_solutions.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
       }
     }
   }

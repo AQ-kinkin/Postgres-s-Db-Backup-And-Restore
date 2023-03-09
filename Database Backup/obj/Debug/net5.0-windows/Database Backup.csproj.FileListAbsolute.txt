@@ -17,3 +17,25 @@ C:\Users\hamed\Desktop\Database Backup\Database Backup\obj\Debug\net5.0-windows\
 C:\Users\hamed\Desktop\Database Backup\Database Backup\obj\Debug\net5.0-windows\ref\Database Backup.dll
 C:\Users\hamed\Desktop\Database Backup\Database Backup\obj\Debug\net5.0-windows\Database_Backup.Backup.resources
 C:\Users\hamed\Desktop\DataBase Backup\Database Backup\obj\Debug\net5.0-windows\Database_Backup.Properties.Resources.resources
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\bin\Debug\net5.0-windows\Database Backup.exe
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\bin\Debug\net5.0-windows\Database Backup.deps.json
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\bin\Debug\net5.0-windows\Database Backup.runtimeconfig.json
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\bin\Debug\net5.0-windows\Database Backup.runtimeconfig.dev.json
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\bin\Debug\net5.0-windows\Database Backup.dll
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\bin\Debug\net5.0-windows\Database Backup.pdb
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\obj\Debug\net5.0-windows\Database Backup.csproj.AssemblyReference.cache
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\obj\Debug\net5.0-windows\Database_Backup.Backup.resources
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\obj\Debug\net5.0-windows\Database_Backup.Properties.Resources.resources
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\obj\Debug\net5.0-windows\Database Backup.csproj.GenerateResource.cache
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\obj\Debug\net5.0-windows\Database Backup.GeneratedMSBuildEditorConfig.editorconfig
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\obj\Debug\net5.0-windows\Database Backup.AssemblyInfoInputs.cache
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\obj\Debug\net5.0-windows\Database Backup.AssemblyInfo.cs
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\obj\Debug\net5.0-windows\Database Backup.csproj.CoreCompileInputs.cache
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\obj\Debug\net5.0-windows\Database Backup.dll
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\obj\Debug\net5.0-windows\refint\Database Backup.dll
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\obj\Debug\net5.0-windows\Database Backup.pdb
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\obj\Debug\net5.0-windows\Database Backup.genruntimeconfig.cache
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\obj\Debug\net5.0-windows\ref\Database Backup.dll
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\bin\Debug\net5.0-windows\postgres_backups_solutions.dll
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\bin\Debug\net5.0-windows\postgres_backups_solutions.pdb
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\obj\Debug\net5.0-windows\Database Backup.csproj.CopyComplete

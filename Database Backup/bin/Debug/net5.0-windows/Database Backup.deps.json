@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "Database Backup/1.0.0": {
+        "dependencies": {
+          "postgres_backups_solutions": "1.0.0"
+        },
         "runtime": {
           "Database Backup.dll": {}
+        }
+      },
+      "postgres_backups_solutions/1.0.0": {
+        "runtime": {
+          "postgres_backups_solutions.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Database Backup/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "postgres_backups_solutions/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

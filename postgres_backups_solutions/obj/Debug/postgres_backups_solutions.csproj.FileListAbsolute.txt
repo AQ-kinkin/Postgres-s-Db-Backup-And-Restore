@@ -1,0 +1,6 @@
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\postgres_backups_solutions\bin\Debug\postgres_backups_solutions.dll
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\postgres_backups_solutions\bin\Debug\postgres_backups_solutions.pdb
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\postgres_backups_solutions\obj\Debug\postgres_backups_solutions.csproj.AssemblyReference.cache
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\postgres_backups_solutions\obj\Debug\postgres_backups_solutions.csproj.CoreCompileInputs.cache
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\postgres_backups_solutions\obj\Debug\postgres_backups_solutions.dll
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\postgres_backups_solutions\obj\Debug\postgres_backups_solutions.pdb
