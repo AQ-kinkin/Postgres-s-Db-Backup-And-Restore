@@ -31,18 +31,7 @@ namespace Database_Backup
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Backup));
-            this.label1 = new System.Windows.Forms.Label();
-            this.Host = new System.Windows.Forms.TextBox();
-            this.Username = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Password = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Port = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Database = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -64,12 +53,13 @@ namespace Database_Backup
             this.label8 = new System.Windows.Forms.Label();
             this.Username2 = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.Save = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.Save = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -79,93 +69,6 @@ namespace Database_Backup
             this.tabPage3.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Host";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // Host
-            // 
-            this.Host.Location = new System.Drawing.Point(168, 43);
-            this.Host.Name = "Host";
-            this.Host.Size = new System.Drawing.Size(124, 23);
-            this.Host.TabIndex = 1;
-            this.Host.Text = "localhost";
-            this.Host.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // Username
-            // 
-            this.Username.Location = new System.Drawing.Point(168, 88);
-            this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(124, 23);
-            this.Username.TabIndex = 3;
-            this.Username.Text = "postgres";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Username";
-            // 
-            // Password
-            // 
-            this.Password.Location = new System.Drawing.Point(168, 131);
-            this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(124, 23);
-            this.Password.TabIndex = 5;
-            this.Password.UseSystemPasswordChar = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 139);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 15);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Password";
-            // 
-            // Port
-            // 
-            this.Port.Location = new System.Drawing.Point(168, 220);
-            this.Port.Name = "Port";
-            this.Port.Size = new System.Drawing.Size(124, 23);
-            this.Port.TabIndex = 9;
-            this.Port.Text = "5432";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 223);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 15);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Port";
-            // 
-            // Database
-            // 
-            this.Database.Location = new System.Drawing.Point(168, 177);
-            this.Database.Name = "Database";
-            this.Database.Size = new System.Drawing.Size(124, 23);
-            this.Database.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 180);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 15);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Database To Backup";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // button1
             // 
@@ -177,25 +80,6 @@ namespace Database_Backup
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.Host);
-            this.groupBox1.Controls.Add(this.Port);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.Username);
-            this.groupBox1.Controls.Add(this.Database);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.Password);
-            this.groupBox1.Location = new System.Drawing.Point(16, 18);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(342, 275);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Input";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -205,7 +89,6 @@ namespace Database_Backup
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // tabControl1
             // 
@@ -217,11 +100,11 @@ namespace Database_Backup
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(604, 335);
             this.tabControl1.TabIndex = 13;
-            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
@@ -286,7 +169,6 @@ namespace Database_Backup
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Input";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // Database2
             // 
@@ -320,7 +202,6 @@ namespace Database_Backup
             this.dbrestore.Name = "dbrestore";
             this.dbrestore.Size = new System.Drawing.Size(124, 23);
             this.dbrestore.TabIndex = 15;
-            this.dbrestore.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label10
             // 
@@ -330,7 +211,6 @@ namespace Database_Backup
             this.label10.Size = new System.Drawing.Size(67, 15);
             this.label10.TabIndex = 14;
             this.label10.Text = "Backup File";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // Port2
             // 
@@ -339,7 +219,6 @@ namespace Database_Backup
             this.Port2.Size = new System.Drawing.Size(124, 23);
             this.Port2.TabIndex = 13;
             this.Port2.Text = "5432";
-            this.Port2.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label9
             // 
@@ -413,6 +292,16 @@ namespace Database_Backup
             this.tabPage3.Text = "Settings";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // Save
+            // 
+            this.Save.Location = new System.Drawing.Point(509, 278);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(75, 23);
+            this.Save.TabIndex = 1;
+            this.Save.Text = "Enregistrer";
+            this.Save.UseVisualStyleBackColor = true;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.button2);
@@ -453,15 +342,22 @@ namespace Database_Backup
             this.label12.TabIndex = 0;
             this.label12.Text = "Path Postgres bin :";
             // 
-            // Save
+            // comboBox1
             // 
-            this.Save.Location = new System.Drawing.Point(509, 278);
-            this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(75, 23);
-            this.Save.TabIndex = 1;
-            this.Save.Text = "Enregistrer";
-            this.Save.UseVisualStyleBackColor = true;
-            this.Save.Click += new System.EventHandler(this.Save_Click);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(143, 11);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(180, 23);
+            this.comboBox1.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 15);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Sélection du Server :";
             // 
             // Backup
             // 
@@ -473,11 +369,10 @@ namespace Database_Backup
             this.Name = "Backup";
             this.Text = "Database Backup And Restore";
             this.Load += new System.EventHandler(this.Backup_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -490,19 +385,7 @@ namespace Database_Backup
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Host;
-        private System.Windows.Forms.TextBox Username;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Password;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Port;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox Database;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
@@ -529,5 +412,7 @@ namespace Database_Backup
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button Save;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

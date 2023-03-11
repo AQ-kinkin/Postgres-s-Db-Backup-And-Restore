@@ -8,7 +8,7 @@ namespace Database_Backup
 {
     internal static class Program
     {
-        static public Configuration? Configuration;
+        static public Configuration? TheConfiguration;
 
         static public void InitVariables()
         {
@@ -16,13 +16,13 @@ namespace Database_Backup
             {
                 try
                 {
-                    Configuration = new Configuration(false);
+                    TheConfiguration = new Configuration(false);
                 }
                 catch { throw; }
             }
             else
             {
-                Configuration = new Configuration(true);
+                TheConfiguration = new Configuration(true);
                 // throw new Exception("Votre fichier de configuration est vide.");
             }
         }
