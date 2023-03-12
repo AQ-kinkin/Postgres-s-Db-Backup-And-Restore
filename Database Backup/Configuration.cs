@@ -15,12 +15,18 @@ namespace Database_Backup
         private enum Sections
         {
             LastUse,
-            Servers
+            Servers,
+            Tables
         };
 
-        private String _PathBinsPg = string.Empty;
-        public String[] ListServer { get; set; }
+        public enum typeConf
+        {
+            Servers,
+            Tables
+        }
 
+        private String _PathBinsPg = string.Empty;
+        public Dictionary<typeConf,string[]> ListServer { get; set; }
 
         /// <summary>
         /// Conscruteur
@@ -64,38 +70,58 @@ namespace Database_Backup
 
         private void load_ListServer()
         {
-            ListServer = ConfigProgXML.GetListOfSection(Sections.Servers.ToString());
-        }
+            ListServer = new Dictionary<typeConf,string[]>();
 
-        public bool save_lastsaisie(String NamePanel, String Host, String Port, String User, String PassWord, String NameBase)
-        {
-            return ConfigProgXML.SetSectionParam(Sections.LastUse.ToString(), NamePanel, new Dictionary<string, string>(){ { "Host", Host},  { "Port", Port}, { "NameBase", NameBase}, { "User", User}, { "PassWord", Encrypt(PassWord) } } );
-        }
-
-        public Dictionary<string, string> load_lastsaisie(string NamePanel)
-        {
-            Dictionary<string, string> Answer = new Dictionary<string, string>()
+            foreach (typeConf mode in Enum.GetValues(typeof(typeConf)))
             {
+                ListServer.Add(mode, ConfigProgXML.GetListOfSection(mode.ToString()));
+            }
+        }
+
+        public static Dictionary<string, string> Create_Dic_params(Configuration.typeConf mode, string host, string port, string database, string user, string password, string tablename)
+        {
+            Dictionary<string, string> Answer = new Dictionary<string, string>() {
+                { "Host", host },
+                { "Port", port },
+                { "NameBase", database },
+                { "User", user },
+                { "PassWord", password }
+             };
+            if (mode == Configuration.typeConf.Tables) Answer.Add("Table", tablename);
+
+            return Answer;
+        }
+
+        private Dictionary<string, string> Create_list_param(typeConf mode)
+        {
+            Dictionary<string, string> Answer = new Dictionary<string, string>() {
                 { "Host", string.Empty },
                 { "Port", string.Empty},
                 { "NameBase", string.Empty},
                 { "User", string.Empty},
                 { "PassWord", string.Empty}
-            };
-
-            ConfigProgXML.ReadSectionParam(Sections.LastUse.ToString(), NamePanel, Answer);
-
-            Answer["PassWord"] = Decrypt(Answer["PassWord"]);
-
+             };
+            if (mode == typeConf.Tables) Answer.Add("Table", string.Empty);
             return Answer;
         }
 
-        public bool save_conf_server(string confname, string host, string port, string username, string password, string database)
+        public bool save_lastsaisie(String NamePanel, Dictionary<string, string> Params)
         {
-            return ConfigProgXML.SetSectionParam(Sections.Servers.ToString(), confname, new Dictionary<string, string>() {
-                { "Host", host }, { "Port", port }, { "NameBase", database }, { "User", username }, { "PassWord", Encrypt(password) }
-            });
+            Params["PassWord"] = Encrypt(Params["PassWord"]);
+            return ConfigProgXML.SetSectionParam(Sections.LastUse.ToString(), NamePanel, Params);
         }
+        public bool save_conf(typeConf mode, string confname, Dictionary<string, string> Params)
+        {
+            Params["PassWord"] = Encrypt(Params["PassWord"]);
+            return ConfigProgXML.SetSectionParam(mode.ToString(), confname, Params);
+        }
+
+        /*public bool save_conf_table(string confname, string host, string port, string username, string password, string database, string tablename)
+        {
+            return ConfigProgXML.SetSectionParam(Sections.Tables.ToString(), confname, new Dictionary<string, string>() {
+                { "Host", host }, { "Port", port }, { "NameBase", database }, { "User", username }, { "PassWord", Encrypt(password) }, { "Table", tablename }
+            });
+        }*/
 
         public string Encrypt(string clearText)
         {
@@ -155,6 +181,29 @@ namespace Database_Backup
             {
                 return string.Empty;
             }
+
+            return Answer;
+        }
+        public Dictionary<string, string> load_lastsaisie(typeConf mode)
+        {
+            Dictionary<string, string> Answer = Create_list_param(mode);
+
+            return load_conf(Sections.LastUse, mode.ToString(), Answer);
+        }
+        public Dictionary<string, string> load_conf(string NamePanel, typeConf mode)
+        {
+            Dictionary<string, string> Answer = Create_list_param(mode);
+
+            Sections _section = Sections.Servers;
+            if (mode == typeConf.Tables) _section = Sections.Tables;
+
+            return load_conf(_section, NamePanel, Answer);
+        }
+        private Dictionary<string, string> load_conf(Sections section, String nameConf, Dictionary<string, string> Answer)
+        {
+            ConfigProgXML.ReadSectionParam(section.ToString(), nameConf, Answer);
+
+            Answer["PassWord"] = Decrypt(Answer["PassWord"]);
 
             return Answer;
         }

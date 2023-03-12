@@ -75,7 +75,7 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 274);
+            this.panel1.Location = new System.Drawing.Point(0, 309);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(322, 33);
             this.panel1.TabIndex = 1;
@@ -106,7 +106,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(322, 307);
+            this.ClientSize = new System.Drawing.Size(322, 342);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;

@@ -8,23 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
-using postgres_backups_solutions;
 
 namespace Database_Backup
 {
     public partial class Backup : Form
     {
-        Imput_Params grpBox_saisie;
+        BackUp_SelectServer backUp_select_server;
 
         public Backup()
         {
             InitializeComponent();
 
-            grpBox_saisie = new Imput_Params(Imput_Params.mode.Serveur);
-            grpBox_saisie.Location = new Point(16, 45);
-            grpBox_saisie.load_backup_tab(Program.TheConfiguration.load_lastsaisie("Backup"));
-            this.tabPage1.Controls.Add(grpBox_saisie);
-            (this.tabPage1.Controls["comboBox1"] as ComboBox).Items.AddRange(Program.TheConfiguration.ListServer);
+            backUp_select_server = new BackUp_SelectServer(Configuration.typeConf.Servers);
+            backUp_select_server.Dock = DockStyle.Fill;
+            tabPage1.Controls.Add(backUp_select_server);
 
             tabPage3.Controls["groupBox3"].Controls["textBox1"].Text = Program.TheConfiguration.PathBinsPg;
         }
@@ -32,33 +29,6 @@ namespace Database_Backup
         private void Backup_Load(object sender, EventArgs e)
         {
             MaximizeBox = false;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                call_postgre_backup dllClass = new call_postgre_backup();
-                var save = new SaveFileDialog();
-                save.Filter = "Fichier dump | *.dump";
-                save.Title = "Enregistrer Sous";
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    dllClass.Simple_Dump(Program.TheConfiguration.PathBinsPg + @"\pg_dump.exe", grpBox_saisie.Host, grpBox_saisie.Port, grpBox_saisie.Username, grpBox_saisie.Password, save.FileName, grpBox_saisie.Database);
-                    if (MessageBox.Show("Voulez-vous sauvegarder la configuration ?", "Gagnez du temps", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        Enregistre_Configuration EnregistreConfiguration = new Enregistre_Configuration(Enregistre_Configuration.mode.Serveur, grpBox_saisie.Host, grpBox_saisie.Port, grpBox_saisie.Database, grpBox_saisie.Username, grpBox_saisie.Password);
-                        if (EnregistreConfiguration.ShowDialog() == DialogResult.OK)
-                        { Program.TheConfiguration.save_conf_server(EnregistreConfiguration.Server, EnregistreConfiguration.Host, EnregistreConfiguration.Port, EnregistreConfiguration.Username, EnregistreConfiguration.Password, EnregistreConfiguration.Database); }
-                        EnregistreConfiguration.Close();
-                    }
-                    Program.TheConfiguration.save_lastsaisie("Backup", grpBox_saisie.Host, grpBox_saisie.Port, grpBox_saisie.Username, grpBox_saisie.Password, grpBox_saisie.Database);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Selection du fichier de sauvegarde", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
         }
 
         private void Restore_Click(object sender, EventArgs e)
@@ -107,6 +77,25 @@ namespace Database_Backup
         private void Save_Click(object sender, EventArgs e)
         {
             Program.TheConfiguration.PathBinsPg = textBox1.Text;
+        }
+
+        private void tabControl1_Selected(object sender, TabControlEventArgs e)
+        {
+            switch(e.TabPageIndex)
+            {
+                case 0:
+                    {
+                        backUp_select_server.Mode = Configuration.typeConf.Servers;
+                        tabPage1.Controls.Add(backUp_select_server);
+                        break;
+                    }
+                case 3:
+                    {
+                        backUp_select_server.Mode = Configuration.typeConf.Tables;
+                        tabPage4.Controls.Add(backUp_select_server);
+                        break;
+                    }
+            }
         }
     }
 }

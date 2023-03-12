@@ -41,3 +41,4 @@ J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\bin\Debug\
 J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\obj\Debug\net5.0-windows\Database Backup.csproj.CopyComplete
 J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\obj\Debug\net5.0-windows\Database_Backup.Imput_Params.resources
 J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\obj\Debug\net5.0-windows\Database_Backup.Enregistre_Configuration.resources
+J:\alex\source\repos\Postgres-s-Db-Backup-And-Restore\Database Backup\obj\Debug\net5.0-windows\Database_Backup.BackUp_SelectServer.resources

@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtTable = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtHost = new System.Windows.Forms.TextBox();
             this.txtPort = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.Table = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtDatabase = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,13 +46,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtTable);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtHost);
             this.groupBox1.Controls.Add(this.txtPort);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.Table);
             this.groupBox1.Controls.Add(this.txtUsername);
             this.groupBox1.Controls.Add(this.txtDatabase);
             this.groupBox1.Controls.Add(this.label3);
@@ -61,18 +61,27 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(312, 217);
+            this.groupBox1.Size = new System.Drawing.Size(312, 265);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input";
             // 
-            // textBox1
+            // label4
             // 
-            this.textBox1.Location = new System.Drawing.Point(168, 140);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(124, 23);
-            this.textBox1.TabIndex = 11;
-            this.textBox1.Text = "5432";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(21, 222);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 15);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Table Name";
+            // 
+            // txtTable
+            // 
+            this.txtTable.Location = new System.Drawing.Point(168, 219);
+            this.txtTable.Name = "txtTable";
+            this.txtTable.Size = new System.Drawing.Size(124, 23);
+            this.txtTable.TabIndex = 11;
+            this.txtTable.TextChanged += new System.EventHandler(this.champstxt_TextChanged);
             // 
             // label6
             // 
@@ -92,20 +101,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Host";
             // 
-            // Host
+            // txtHost
             // 
             this.txtHost.Location = new System.Drawing.Point(168, 24);
-            this.txtHost.Name = "Host";
+            this.txtHost.Name = "txtHost";
             this.txtHost.Size = new System.Drawing.Size(124, 23);
             this.txtHost.TabIndex = 1;
-            this.txtHost.Text = "localhost";
+            this.txtHost.TextChanged += new System.EventHandler(this.champstxt_TextChanged);
             // 
-            // Port
+            // txtPort
             // 
-            this.txtPort.Location = new System.Drawing.Point(168, 219);
-            this.txtPort.Name = "Port";
+            this.txtPort.Location = new System.Drawing.Point(168, 140);
+            this.txtPort.Name = "txtPort";
             this.txtPort.Size = new System.Drawing.Size(124, 23);
             this.txtPort.TabIndex = 9;
+            this.txtPort.TextChanged += new System.EventHandler(this.champstxt_TextChanged);
             // 
             // label2
             // 
@@ -116,29 +126,21 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Username";
             // 
-            // Table
-            // 
-            this.Table.AutoSize = true;
-            this.Table.Location = new System.Drawing.Point(24, 222);
-            this.Table.Name = "Table";
-            this.Table.Size = new System.Drawing.Size(34, 15);
-            this.Table.TabIndex = 8;
-            this.Table.Text = "Table";
-            // 
-            // Username
+            // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(168, 64);
-            this.txtUsername.Name = "Username";
+            this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(124, 23);
             this.txtUsername.TabIndex = 3;
-            this.txtUsername.Text = "postgres";
+            this.txtUsername.TextChanged += new System.EventHandler(this.champstxt_TextChanged);
             // 
-            // Database
+            // txtDatabase
             // 
             this.txtDatabase.Location = new System.Drawing.Point(168, 177);
-            this.txtDatabase.Name = "Database";
+            this.txtDatabase.Name = "txtDatabase";
             this.txtDatabase.Size = new System.Drawing.Size(124, 23);
             this.txtDatabase.TabIndex = 7;
+            this.txtDatabase.TextChanged += new System.EventHandler(this.champstxt_TextChanged);
             // 
             // label3
             // 
@@ -158,13 +160,14 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Database To Backup";
             // 
-            // Password
+            // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(168, 103);
-            this.txtPassword.Name = "Password";
+            this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(124, 23);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.TextChanged += new System.EventHandler(this.champstxt_TextChanged);
             // 
             // Imput_Params
             // 
@@ -172,7 +175,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "Imput_Params";
-            this.Size = new System.Drawing.Size(312, 217);
+            this.Size = new System.Drawing.Size(312, 265);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -182,17 +185,17 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTable;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtHost;
         private System.Windows.Forms.TextBox txtPort;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label Table;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtDatabase;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label label4;
     }
 }

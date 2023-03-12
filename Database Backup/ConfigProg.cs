@@ -145,7 +145,7 @@ namespace Database_Backup
                 }
             }
 
-            return Reponse;
+            return (Reponse == null)?new string[0]: Reponse;
         }
 
         static public void ReadSectionParam(string SectionName, string namePanel, Dictionary<string, string> Data)

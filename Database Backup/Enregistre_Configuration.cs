@@ -12,13 +12,7 @@ namespace Database_Backup
 {
     public partial class Enregistre_Configuration : Form
     {
-        public enum mode
-        {
-            Serveur,
-            Table
-        }
-
-        public String Server
+        public String NomConf
         {
             get { return textBox_ServerName.Text; }
         }
@@ -42,29 +36,36 @@ namespace Database_Backup
         {
             get { return grpBox_saisie.Password; }
         }
+        public String Table
+        {
+            get { return grpBox_saisie.Table; }
+        }
 
         private Imput_Params grpBox_saisie;
 
-        public Enregistre_Configuration(mode Mode, string host, string port, string database, string user, string password)
+        public Enregistre_Configuration(Configuration.typeConf Mode, Dictionary<string, string> datas)
         {
             InitializeComponent();
 
-            grpBox_saisie = new Imput_Params(Imput_Params.mode.Serveur);
-            grpBox_saisie.load_backup_tab(new Dictionary<string, string>() {
-                { "Host", host },
-                { "Port", port },
-                { "NameBase", database },
-                { "User", user },
-                { "PassWord", password }
-            });
+            grpBox_saisie = new Imput_Params(Mode);
+
+            grpBox_saisie.Init_Champs(datas, false);
             switch (Mode)
             {
-                case mode.Serveur:
+                case Configuration.typeConf.Servers:
                     {
                         this.Text = "Enregistrement d'un serveur";
                         grpBox_saisie.Location = new Point(3, 55);
                         this.Controls.Add(grpBox_saisie);
-                        //this.Size = new Size(312, 218);
+                        this.Size = new Size(342, 350);
+                        break;
+                    }
+                case Configuration.typeConf.Tables:
+                    {
+                        this.Text = "Enregistrement d'une table d'une BDD";
+                        grpBox_saisie.Location = new Point(3, 55);
+                        this.Controls.Add(grpBox_saisie);
+                        this.Size = new Size(342, 380);
                         break;
                     }
             }
