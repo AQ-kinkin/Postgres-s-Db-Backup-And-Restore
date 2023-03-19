@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using postgres_backups_solutions;
+using static System.Windows.Forms.Design.AxImporter;
 
 namespace Database_Backup
 {
@@ -81,7 +82,9 @@ namespace Database_Backup
                     {
                         case Configuration.typeConf.Servers:
                             {
-                                dllClass.dump_base(Program.TheConfiguration.PathBinsPg + @"\pg_dump.exe", grpBox_saisie.Host, grpBox_saisie.Port, grpBox_saisie.Username, grpBox_saisie.Password, save.FileName, grpBox_saisie.Database);
+                                string[] info_connexion = new string[] { grpBox_saisie.Host, grpBox_saisie.Port, grpBox_saisie.Username, grpBox_saisie.Password };
+                                string[] Options = new string[] { "-Fc" };
+                                dllClass.dump_base(Program.TheConfiguration.PathBinsPg + @"\pg_dump.exe", info_connexion, save.FileName, grpBox_saisie.Database, Options);
                                 break;
                             }
                         case Configuration.typeConf.Tables:
@@ -96,7 +99,9 @@ namespace Database_Backup
                                         EnregistreConfiguration.Close();
                                     }
                                 }*/
-                                dllClass.dump_table(Program.TheConfiguration.PathBinsPg + @"\pg_dump.exe", grpBox_saisie.Host, grpBox_saisie.Port, grpBox_saisie.Username, grpBox_saisie.Password, save.FileName, grpBox_saisie.Database, grpBox_saisie.Table);
+                                string[] info_connexion = new string[] { grpBox_saisie.Host, grpBox_saisie.Port, grpBox_saisie.Username, grpBox_saisie.Password };
+                                string[] Options = new string[] { "-Fc" };
+                                dllClass.dump_table(Program.TheConfiguration.PathBinsPg + @"\pg_dump.exe", info_connexion, save.FileName, grpBox_saisie.Database, grpBox_saisie.Table, Options);
                                 break;
                             }
                     }

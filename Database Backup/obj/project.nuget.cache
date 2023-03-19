@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ERvSH7IZQ2OmCgwy/32IOTRS1Rk5j8uVUFoZtoR5m2WPbl4lx028qF8jZVXJR+UHVKwikujWwLJZV+k8lzmtng==",
+  "dgSpecHash": "oXWEn5c8pOJFZ5//D3V+5YL8H87MrUMHt5EFhGHB/DPJFg1uQnG5fro0N0Xt867xHoG0V/Lyq7XkF+DiL9TjnQ==",
   "success": true,
   "projectFilePath": "J:\\alex\\source\\repos\\Postgres-s-Db-Backup-And-Restore\\Database Backup\\Database Backup.csproj",
-  "expectedPackageFiles": [
-    "J:\\alex\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.16\\microsoft.netcore.app.host.win-x64.5.0.16.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
